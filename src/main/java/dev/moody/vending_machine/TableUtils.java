@@ -57,12 +57,11 @@ public final class TableUtils {
    */
   public static String getItemTable(String id, VendingItem item) {
     return AsciiTable.getTable(
-      new String[] { "ID", "Name", "Amount", "Price" },
+      new String[] { "ID", "Name", "Price" },
       new String[][] {
         {
           id.toUpperCase(),
           item.name,
-          Integer.toString(item.amount),
           CurrencyUtils.format(item.price)
         }
       }
